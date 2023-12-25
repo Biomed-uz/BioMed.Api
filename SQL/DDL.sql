@@ -1,23 +1,27 @@
-create database CentreMedDatabase;
+-------------------Cretae database-----------------
+DROP DATABASE CentreMedDatabase;
+CREATE DATABASE CentreMedDatabase;
 
-------------------------------------
-use CentreMedDatabase;
 
-drop table Treatment;
-drop table Laboratory_Result;
-drop table Test_Type;
-drop table Disease_Category;
-drop table Disease;
-drop table Payment;
-drop table Visit;
-drop table Doctor_Category;
-drop table Doctor_Department;
-drop table Doctor;
-drop table Department;
-drop table Category;
-drop table Patient;
+-------------------Delete tables-----------------
 
-------------------------------------
+USE CentreMedDatabase;
+
+DROP TABLE Treatment;
+DROP TABLE Laboratory_Result;
+DROP TABLE Test_Type;
+DROP TABLE Disease;
+DROP TABLE Disease_Category;
+DROP TABLE Payment;
+DROP TABLE Visit;
+DROP TABLE Doctor_Category;
+DROP TABLE Doctor_Department;
+DROP TABLE Doctor;
+DROP TABLE Department;
+DROP TABLE Category;
+DROP TABLE Patient;
+
+-------------------Create tables-----------------
 
 CREATE TABLE Patient
 (
@@ -88,18 +92,18 @@ CREATE TABLE Payment
 	FOREIGN KEY (Visit_Id) REFERENCES Visit(Id)
 )
 
+CREATE TABLE Disease_Category
+(
+  Id INT PRIMARY KEY IDENTITY NOT NULL,
+  Disease_Category_Name VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE Disease
 (
   Id INT PRIMARY KEY IDENTITY NOT NULL,
-  Name VARCHAR(255) NOT NULL
-)
-
-CREATE TABLE Disease_Category
-(
-  Disease_Id INT NOT NULL,
-  Category_Id INT NOT NULL,
-  FOREIGN KEY (Disease_Id) REFERENCES Disease(Id),
-  FOREIGN KEY (Category_Id) REFERENCES Category(Id)
+  Disease_Category_Id INT NOT NULL,
+  Disease_Name VARCHAR(255) NOT NULL,
+  FOREIGN KEY (Disease_Category_Id) REFERENCES Disease_Category(Id)
 )
 
 CREATE TABLE Test_Type
