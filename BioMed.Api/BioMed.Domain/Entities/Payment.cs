@@ -1,8 +1,9 @@
-﻿namespace BioMed.Domain.Entities
+﻿using BioMed.Domain.Common;
+
+namespace BioMed.Domain.Entities
 {
-    public class Payment
+    public class Payment : EntityBase
     {
-        public int Id { get; set; }
         public decimal Amount { get; set; }
         public DateTime Date { get; set; }
 

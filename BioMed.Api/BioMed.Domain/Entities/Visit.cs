@@ -1,8 +1,9 @@
-﻿namespace BioMed.Domain.Entities
+﻿using BioMed.Domain.Common;
+
+namespace BioMed.Domain.Entities
 {
-    public class Visit
+    public class Visit : EntityBase
     {
-        public int Id { get; set; }
         public DateTime VisitDate { get; set; }
         public string? Prescription { get; set; }
         public decimal TotalPrice { get; set; }

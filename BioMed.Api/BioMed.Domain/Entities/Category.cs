@@ -1,8 +1,9 @@
-﻿namespace BioMed.Domain.Entities
+﻿using BioMed.Domain.Common;
+
+namespace BioMed.Domain.Entities
 {
-    public class Category
+    public class Category : EntityBase
     {
-        public int Id { get; set; } 
         public string? Name { get; set; }
 
         public virtual ICollection<DoctorCategory>? DoctorCategories { get; set; }

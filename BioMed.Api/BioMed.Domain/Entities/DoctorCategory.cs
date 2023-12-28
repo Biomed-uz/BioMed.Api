@@ -1,8 +1,9 @@
-﻿namespace BioMed.Domain.Entities
+﻿using BioMed.Domain.Common;
+
+namespace BioMed.Domain.Entities
 {
-    public class DoctorCategory
+    public class DoctorCategory : EntityBase
     {
-        public int Id { get; set; }
 
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
