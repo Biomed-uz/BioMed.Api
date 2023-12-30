@@ -1,8 +1,7 @@
 ﻿namespace BioMed.Domain.Entities
 {
-    public class LabResult
+    public class LabResult : EntityBase
     {
-        public int Id { get; set; }
         public string? Result { get; set; }
         public DateTime? Date { get; set; }
 

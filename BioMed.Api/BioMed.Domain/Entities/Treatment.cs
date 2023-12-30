@@ -1,8 +1,7 @@
 ﻿namespace BioMed.Domain.Entities
 {
-    public class Treatment
+    public class Treatment : EntityBase
     {
-        public int Id { get; set; }
         public string? Prescription { get; set; }
 
         public int VisitId { get; set; }
