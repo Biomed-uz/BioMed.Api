@@ -1,8 +1,7 @@
 ﻿namespace BioMed.Domain.Entities
 {
-    public class Disease
+    public class Disease : EntityBase
     {
-        public int Id { get; set; }
         public int DiseaseCategoryId { get; set; }
         public DiseaseCategory? DiseaseCategory { get; set; }
         public string? Name { get; set; }

@@ -1,8 +1,7 @@
 ﻿namespace BioMed.Domain.Entities
 {
-    public class Doctor
+    public class Doctor : EntityBase
     {
-        public int Id { get; set; }
         public string? FullName { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Email { get; set; }
