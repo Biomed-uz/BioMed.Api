@@ -13,4 +13,4 @@ namespace BioMed.Domain.Interfaces.Services
         void DeleteTreatment(int id);
     }
 }
-}
+
