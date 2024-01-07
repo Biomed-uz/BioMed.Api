@@ -28,7 +28,7 @@ namespace BioMed.Infrastructure.Persistence.Configurations
 
             builder.HasMany(p => p.Visits)
                 .WithOne(v => v.Patient)
-                .HasForeignKey(p => p.PatientId);
+                .HasForeignKey(v => v.PatientId);
         }
     }
 }
