@@ -1,11 +1,6 @@
 ﻿using BioMed.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BioMed.Infrastructure.Persistence.Configurations
 {
@@ -21,7 +16,6 @@ namespace BioMed.Infrastructure.Persistence.Configurations
                 .HasMaxLength(500)
                 .IsRequired();
             builder.Property(d => d.PhoneNumber)
-                .HasColumnType("Phone")
                 .HasMaxLength(50);
             builder.Property(d => d.Email)
                 .HasMaxLength(255);

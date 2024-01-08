@@ -21,8 +21,7 @@ namespace BioMed.Infrastructure.Persistence.Configurations
             builder.Property(p => p.MiddleName)
                 .HasMaxLength(255);
             builder.Property(p => p.PhoneNumber)
-                .HasColumnType("Phone")
-                .IsRequired();
+                .HasMaxLength(50);
             builder.Property(p => p.Email)
                 .HasMaxLength(255);
 
