@@ -29,4 +29,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BioMed.Domain\BioMed.Domain.csproj" />
+    <ProjectReference Include="..\BioMed.Infrastructure\BioMed.Infrastructure.csproj" />
+    <ProjectReference Include="..\BioMed.Services\BioMed.Services.csproj" />
+  </ItemGroup>
+
 </Project>
