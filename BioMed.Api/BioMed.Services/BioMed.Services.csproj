@@ -27,4 +27,9 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BioMed.Domain\BioMed.Domain.csproj" />
+    <ProjectReference Include="..\BioMed.Infrastructure\BioMed.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
